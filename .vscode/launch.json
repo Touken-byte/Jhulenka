@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-msedge",
+            "request": "launch",
+            "name": "Abrir Sistema Biblioteca",
+            "file": "c:\\Users\\FIRNT\\Downloads\\Jhulenka\\Jhulenka\\biblioteca-sistema\\frontend\\index.html",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
