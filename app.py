@@ -1013,3 +1013,4 @@ with app.app_context():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=False, host='0.0.0.0', port=port)
+# deploy mié 24 jun 2026 14:39:25 -04
