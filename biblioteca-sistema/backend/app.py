@@ -53,7 +53,18 @@ class Usuario(db.Model):
     fecha_actualizacion = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
     # Relación con préstamos
-    prestamos = db.relationship('Prestamo', backref='usuario', lazy=True)
+    prestamos = db.relationship(
+        'Prestamo',
+        foreign_keys='Prestamo.id_usuario',
+        backref='usuario',
+        lazy=True
+    )
+    prestamos_creados = db.relationship(
+        'Prestamo',
+        foreign_keys='Prestamo.creado_por',
+        backref='creador',
+        lazy=True
+    )
     reservas = db.relationship('Reserva', backref='usuario', lazy=True)
     
     def to_dict(self):
